@@ -10,7 +10,7 @@
 
 ## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Eriane do Santos Oliveira Dias</a>, <a href="https://www.linkedin.com/in/giovana-kamilly-ferrari-blanck/">Giovanna Kamilly Ferrari Blanck</a>, <a href="https://www.linkedin.com/in/henrique-jorge/">Henrique Jorge Martins Figueiredo</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luan Rocha da Silva</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Queiroz</a>
 
 ## Descrição
 
