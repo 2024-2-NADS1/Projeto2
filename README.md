@@ -41,7 +41,7 @@ Os dados coletados pelos sensores e câmeras são processados em tempo real e tr
  <br>•	Blynk IOT (em andamento)</br>
 
 ##  Técnicas e Tecnologias utilizadas
-- ``C++``
+
 - ``Arduino IDE``
 - ``Blynk IOT``
 
