@@ -26,6 +26,25 @@ O sistema desenvolvido integra um carrinho robótico que percorre autonomamente 
 Os dados coletados pelos sensores e câmeras são processados em tempo real e transmitidos para uma plataforma de análise na nuvem. A partir dessa análise, o sistema consegue identificar padrões, como a movimentação das pragas. Caso seja detectada uma infestação, o sistema envia alertas automáticos ao agricultor, por meio de notificações no celular ou por e-mail, permitindo que ações corretivas sejam tomadas de forma rápida e eficaz.
 <br><br>
 
+## Componentes do Projetos
+
+<br>🛠 Hardware</br>
+ <br>•	Sensor ultrassônico HC – SR04</br>
+ <br>•	ESP32 – CAM </br>
+ <br>•	Arduino uno R4 Wifi </br>
+ <br>•	Chassi Tank com esteira </br>
+ <br>•	Driver Ponte H L298N </br>
+ <br>•	Protoboard e Jumpers</br>
+ 
+<br>💻  Software:</br>
+ <br>•	Arduino IDE</br>
+ <br>•	Blynk IOT (em andamento)</br>
+
+##  Técnicas e Tecnologias utilizadas
+- ``C++``
+- ``Arduino IDE``
+- ``Blynk IOT``
+
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
@@ -95,6 +114,18 @@ make install
 npm test
 Coloque código do prompt de comnando se for necessário
 ```
+
+## 🗃 Histórico de lançamentos
+
+* 07/10/2024 CONCLUÍDO: Compra de materiais (Eriane)
+* 10/10/2024 ANDAMENTO: Chassi Tank (Henrique)
+* 10/10/2024 ANDAMENTO: Integração ao Blynk (Luan)
+* 17/10/2024 CONCLUÍDO: Teste de sensores (Todos)
+* 03/11/2024 CONCLUÍDO: Divisão de afazeres 
+* 07/11/2024 ANDAMENTO: Organização do github e pastas (Todos)
+* 07/11/2024 ANDAMENTO: Desenvolvimento do código e circuito (Todos)
+* 08/11/2024 ANDAMENTO: Documentação do projeto (Giovanna)
+* 17/11/2024 ANDAMENTO: Conclusão do projeto.
 
 ## 📋 Licença/License
 
