@@ -76,21 +76,20 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
-## 🛠 Instalação
+## 🛠 Impacto Esperado
 
-<b>Android:</b>
+<b>AgroBot:</b>
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
+Este projeto tem o potencial de transformar práticas agrícolas tradicionais, reduzindo custos e aumentando a eficiência do cultivo de hortaliças. A introdução de robôs na agricultura pode melhorar a sustentabilidade e otimizar recursos 
 
 ```sh
-Coloque código do prompt de comnando se for necessário
+A tecnologia ESP32 permite que o robô seja utilizado com conectividade Bluetooth e Wi-Fi, facilitando a coleta e armazenamento de dados em tempo real. As informações capturadas podem ser exibidas em uma plataforma online, proporcionando ao usuário uma visualização imediata e remota do progresso e das condições monitoradas pelo robô.
 ```
 
-<b>Windows:</b>
+<b>Arduino:</b>
 
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
+Não é necessária nenhuma instalação! Basta executar o arquivo. 
+O vídeo será exibido apenas se houver um servidor web, podendo ser executado como qualquer outro programa.
 
 ```sh
 Coloque código do prompt de comnando se for necessário
