@@ -8,7 +8,7 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Eriane do Santos Oliveira Dias</a>, <a href="https://www.linkedin.com/in/giovana-kamilly-ferrari-blanck/">Giovanna Kamilly Ferrari Blanck</a>, <a href="https://www.linkedin.com/in/henrique-jorge/">Henrique Jorge Martins Figueiredo</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luan Rocha da Silva</a>
+## Integrantes: <a href="https://www.linkedin.com/in/eriane-dos-santos-oliveira/">Eriane do Santos Oliveira Dias</a>, <a href="https://www.linkedin.com/in/giovana-kamilly-ferrari-blanck/">Giovanna Kamilly Ferrari Blanck</a>, <a href="https://www.linkedin.com/in/henrique-jorge/">Henrique Jorge Martins Figueiredo</a>, <a href="https://www.linkedin.com/in/luan-rocha/">Luan Rocha da Silva</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Queiroz</a>
 
