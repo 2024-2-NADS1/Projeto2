@@ -1,4 +1,3 @@
-Certo! Vou organizar os algoritmos que você precisa em C++ para o projeto de reconhecimento de plantas com o ESP32-CAM. Abaixo estão alguns componentes essenciais, incluindo captura de imagem, pré-processamento básico e um esboço para o modelo de classificação:
 
 1. Configuração da Captura de Imagem
 
