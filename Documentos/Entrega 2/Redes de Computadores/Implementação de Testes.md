@@ -31,5 +31,5 @@ Caso o teste falhe, verifique:
 - Disponibilidade e URL do servidor de teste.
 - Erros no código ou na estrutura do JSON enviado.
 
-Para mais detalhes, consulte o [README principal](../README.md).
+Para mais detalhes, consulte o [README principal](README.md).
 
