@@ -16,7 +16,7 @@ Verificar o funcionamento e desempenho da comunicação em rede entre o ESP32-CA
 4. O ESP32-CAM exibe no monitor serial a resposta do servidor, validando a integridade da comunicação.
 
 ## Execução
-1. Carregue o código `testes_comunicacao.ino` no ESP32-CAM.
+1. Carregue o código [testes_comunicacao](testes_comunicacao.ino) no ESP32-CAM.
 2. Abra o Monitor Serial para verificar a conexão e o status da comunicação.
 3. O código enviará dados a cada 10 segundos e exibirá a resposta do servidor para cada envio.
 
@@ -25,11 +25,4 @@ Verificar o funcionamento e desempenho da comunicação em rede entre o ESP32-CA
 - O monitor serial exibe "Resposta do Servidor: OK" (ou outra confirmação) para cada requisição enviada.
 - Em caso de falhas, erros específicos serão mostrados para identificação de problemas na comunicação.
 
-## Considerações
-Caso o teste falhe, verifique:
-- Credenciais de Wi-Fi.
-- Disponibilidade e URL do servidor de teste.
-- Erros no código ou na estrutura do JSON enviado.
-
-Para mais detalhes, consulte o [README principal](README.md).
 
