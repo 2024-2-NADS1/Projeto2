@@ -162,6 +162,3 @@ bool processarImagem(camera_fb_t *fb) {
 - **Captura e Processamento de Imagem**: O código captura uma imagem a cada ciclo. Na função `processarImagem`, você pode adicionar a lógica de processamento, como detecção de objetos.
 - **Cálculo da Acurácia**: A cada ciclo, o código calcula e exibe a acurácia com base na quantidade de leituras corretas e no total de leituras.
 
-Esse código serve como base. Você precisará adaptar a função `processarImagem` de acordo com o tipo de leitura que quer validar (como a presença de um objeto específico).
-
-Se precisar de ajuda para adaptar a função de processamento de imagem ou configurar o ESP32-CAM, me avise!
