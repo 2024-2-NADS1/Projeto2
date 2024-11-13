@@ -8,7 +8,7 @@ Para calcular a acurácia usando probabilidade com o sensor ESP32-CAM, você pod
 
 4. **Calcular acurácia**:
    \[
-   \text{Acurácia} = \frac{\text{Número de leituras corretas}}{\text{Número total de leituras}} \times 100\%
+   \text{Acurácia} = \frac{\text{Número de leituras corretas}} {\text{Número total de leituras}} \times 100\%
    \]
 
 5. **Implementação**: Programe o cálculo da acurácia no código do ESP32-CAM, para que ele seja realizado automaticamente após cada conjunto de leituras.
