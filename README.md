@@ -12,7 +12,7 @@
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Victor Bruno Alexander Rosetti de Queiroz</a>
 
-## Descrição
+## Introdução
 
 <p align="center">
 <img src="https://github.com/2024-1-NADS1-A/Projeto9/blob/main/imagens/ODS.jpg" alt="NOME DO JOGO" border="0"><br><br>
@@ -20,6 +20,11 @@
   </a></p>
 
 O nosso projeto tem como objetivo desenvolver e implementar uma solução inovadora para o monitoramento e controle de pragas em ambientes agrícolas, utilizando sensores conectados por IoT para a detecção e identificação em tempo real de pragas. A proposta visa proporcionar uma abordagem mais eficiente, ágil e precisa na detecção de infestação de pragas, com a finalidade de reduzir os impactos negativos na produção agrícola, como por exemplo o uso de excessivo de pesticidas e promover práticas mais sustentáveis e rentáveis para os produtores rurais.
+<br><br>
+
+## 🔎 Descrição
+
+O aumento da demanda por alimentos e a necessidade de práticas agrícolas sustentáveis trazem à tona um desafio significativo, sendo ele o controle eficaz de pragas que afetam plantações e comprometem a produção. Métodos tradicionais de monitoramento e controle de pragas, como inspeções manuais e uso indiscriminado de pesticidas, têm se mostrado prejudiciais ao meio ambiente. Nesse contexto, o uso de tecnologias emergentes, como a Internet das Coisas (IoT), apresenta-se como uma solução promissora.
 <br><br>
 O sistema desenvolvido integra um carrinho robótico que percorre autonomamente a área da plantação, utilizando uma combinação de sensores e câmeras para realizar a coleta contínua de dados. Este carrinho é equipado com sensores de movimento, que detectam a presença de pragas, e câmeras de alta resolução, que capturam imagens das plantas e do solo, permitindo a análise visual das pragas presentes. A presença desses sensores e câmeras no carrinho permite uma cobertura dinâmica e extensiva das áreas agrícolas, sem a necessidade de intervenção constante por parte dos agricultores.
 <br><br>
@@ -52,17 +57,10 @@ Os dados coletados pelos sensores e câmeras são processados em tempo real e tr
 |-->documentos<br>
   &emsp;|-->antigos<br>
   &emsp;|Documentação.docx<br>
-|-->executáveis<br>
-  &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
   &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
 |readme.md<br>
-
-A pasta raiz contem dois arquivos que devem ser alterados:
 
 <b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
 
