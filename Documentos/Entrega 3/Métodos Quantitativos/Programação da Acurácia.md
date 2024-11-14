@@ -1,45 +1,47 @@
+Aqui está uma versão ainda mais simples e direta, com uma linguagem bem informal:
 
-Para calcular a acurácia dos sensores (o quanto eles acertam nas leituras), vamos comparar as leituras dos sensores com valores de referência (o valor que seria o “verdadeiro”). Esse cálculo é baseado na frequência com que os sensores fornecem leituras dentro de uma margem de erro aceitável. Assim, a ideia é contar quantas vezes os sensores “acertam” comparado ao total de leituras feitas.
+---
 
-Aqui está o processo que você pode seguir:
+### Passo a Passo para Calcular a Acurácia dos Sensores ESP32-CAM e HC-SR04
 
-### . Coleta de Leituras
+Para ver o quanto os sensores são precisos (ou seja, a acurácia deles), vamos comparar as leituras deles com um valor que já sabemos ser o "correto". A ideia é contar quantas vezes os sensores chegam perto desse valor correto, dentro de uma margem de erro que definimos.
 
-- **Para o ESP32-CAM**: as leituras podem ser feitas em imagens ou no reconhecimento de objetos. Por exemplo, se o objetivo for identificar corretamente um objeto em uma imagem, a acurácia pode ser calculada com base na frequência de identificação correta.
+### . Leituras dos Sensores
+
+- **ESP32-CAM**: A leitura pode ser a imagem capturada ou o reconhecimento de um objeto na imagem. A gente compara essa leitura com o que esperamos (por exemplo, se ele reconheceu o objeto certo).
   
-- **Para o HC-SR04**: como ele mede a distância, as leituras devem ser comparadas a uma distância de referência. Por exemplo, se a distância correta é 50 cm, vamos ver quantas leituras saem próximas disso.
+- **HC-SR04**: Como ele mede distância, a leitura pode ser comparada a uma distância conhecida, tipo 50 cm.
 
-### . Definindo a Margem de Erro
+### . Definir a Margem de Erro
 
-Cada sensor terá uma margem de erro específica, que define o quanto a leitura pode variar do valor correto e ainda ser considerada aceitável. Por exemplo:
-
-- **ESP32-CAM**: pode ter uma margem de erro de 10%.
-- **HC-SR04**: pode ter uma margem de erro de 2 cm.
+Aqui a gente define uma margem de erro para cada sensor, para dizer o quanto ele pode desviar do valor correto e ainda estar "certo":
+- **ESP32-CAM**: pode ter uma margem de 10%.
+- **HC-SR04**: pode ter uma margem de 2 cm.
 
 ### . Código para Calcular a Acurácia
 
-O código abaixo faz o cálculo da acurácia para os dois sensores. Ele gera algumas leituras simuladas para cada sensor, compara com os valores de referência e calcula a porcentagem de acertos.
+O código abaixo faz isso. Ele simula umas leituras, compara com o valor de referência e conta quantas vezes o sensor acerta. Aí, calcula a porcentagem de acertos, que é a nossa acurácia.
 
 ```python
 import random
 
-# Configurando a margem de erro para cada sensor
-margem_erro_esp32cam = 0.1  # 10% de margem para ESP32-CAM
-margem_erro_hcsr04 = 2.0    # 2 cm de margem para HC-SR04
+# Margem de erro dos sensores
+margem_erro_esp32cam = 0.1  # 10%
+margem_erro_hcsr04 = 2.0    # 2 cm
 
-# Simulando leituras do ESP32-CAM e do HC-SR04
-leituras_esp32cam = [random.uniform(0.9, 1.1) for _ in range(100)]  # ESP32-CAM
-valores_referencia_esp32cam = [1.0] * 100  # Valor de referência para ESP32-CAM
+# Leituras simuladas dos sensores
+leituras_esp32cam = [random.uniform(0.9, 1.1) for _ in range(100)]
+valores_referencia_esp32cam = [1.0] * 100
 
-leituras_hcsr04 = [random.uniform(48, 52) for _ in range(100)]      # HC-SR04
-valores_referencia_hcsr04 = [50.0] * 100  # Valor de referência para HC-SR04
+leituras_hcsr04 = [random.uniform(48, 52) for _ in range(100)]
+valores_referencia_hcsr04 = [50.0] * 100
 
-# Função que calcula a acurácia comparando leituras com o valor de referência
+# Função para calcular acurácia
 def calcular_acuracia(leituras, referencia, margem_erro):
     leituras_corretas = sum(1 for leitura, ref in zip(leituras, referencia) if abs(leitura - ref) <= margem_erro)
     return (leituras_corretas / len(leituras)) * 100
 
-# Calculando a acurácia para cada sensor
+# Calculando a acurácia de cada sensor
 acuracia_esp32cam = calcular_acuracia(leituras_esp32cam, valores_referencia_esp32cam, margem_erro_esp32cam)
 acuracia_hcsr04 = calcular_acuracia(leituras_hcsr04, valores_referencia_hcsr04, margem_erro_hcsr04)
 
@@ -47,13 +49,8 @@ print(f"Acurácia do ESP32-CAM: {acuracia_esp32cam:.2f}%")
 print(f"Acurácia do HC-SR04: {acuracia_hcsr04:.2f}%")
 ```
 
-### Explicação Simples do Código
+### Resumo
 
-1. **Definição da Margem de Erro**: A margem de erro determina o quanto a leitura pode variar do valor verdadeiro para ainda ser considerada correta.
-2. **Simulação de Leituras**: Usamos números aleatórios para simular as leituras dos sensores. No caso real, você substituiria isso pelas leituras reais.
-3. **Cálculo da Acurácia**: A função `calcular_acuracia` conta quantas leituras estão dentro da margem de erro e calcula a porcentagem de acurácia.
-4. **Resultados**: O código imprime a acurácia dos dois sensores como uma porcentagem.
-
-### Conclusão
-
-Esse código fornece uma estimativa da acurácia dos sensores com base em uma série de leituras, mostrando quantas vezes o sensor forneceu uma leitura “correta”. Basta rodá-lo para ver a acurácia de cada sensor.
+1. **Margem de Erro**: Define até onde o sensor pode variar e ainda estar certo.
+2. **Simulação de Leituras**: Gera algumas leituras aleatórias para cada sensor.
+3. **Cálculo**: A função conta quantas leituras são “corretas” e mostra a porcentagem de acurácia.
