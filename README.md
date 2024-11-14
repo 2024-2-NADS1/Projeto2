@@ -136,15 +136,19 @@ Coloque código do prompt de comnando se for necessário
 
 * 0.1.1 - 07/10/2024
   * Planejamento do projeto 
-  * Aquisição dos materiais (Eriane)
+  * Aquisição dos materiais 
 * 0.1.2 - 10/10/2024 e 17/10/2024 
-  * Inicio da construção do código e do circuito 
-* 10/10/2024 ANDAMENTO: Integração ao Blynk (Luan)
-* 03/11/2024 CONCLUÍDO: Divisão de afazeres 
-* 07/11/2024 ANDAMENTO: Organização do github e pastas (Todos)
-* 07/11/2024 ANDAMENTO: Desenvolvimento do código e circuito (Todos)
-* 08/11/2024 ANDAMENTO: Documentação do projeto (Giovanna)
-* 17/11/2024 ANDAMENTO: Conclusão do projeto.
+  * Inicio da construção do código e do circuito
+* 0.1.3 - 24/10/2024
+  * Divisão dos afazeres 
+* 0.1.4 - 07/11/2024
+  * Organização do github e pastas
+* 0.1.5 - 07/11/202407/11/2024
+  * Desenvolvimento do código e circuito 
+* 0.1.6 - 08/11/2024
+  * Documentação do projeto 
+* 0.1.7 - 17/11/2024
+  * Conclusão do projeto.
 
 ## 📋 Licença/License
 
