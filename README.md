@@ -116,12 +116,30 @@ npm test
 Coloque código do prompt de comnando se for necessário
 ```
 
+## 💻 Configuração para Desenvolvimento
+## Instalação Blynk
+
+<br>• Entre no site do Blykn e faça login:https://blynk.io/</br>
+<br>• Crie um novo projeto e obtenha as credenciais com o token de autenticação;</br>
+<br>• No código do ESP32 inclua a biblioteca do Blynk e insira as credenciais;</br>
+<br>• Estabeleça a conexão com o servidor do Blynk;</br>
+<br>• Configure os pinos virtuais;</br>
+<br>• Com a conexão, integre o ESP32 ao Blynk;</br>
+<br>• Coloque o ESP32 online;</br>
+<br>• Execute atualizações de firmaware OTA;</br>
+<br>• Contrua a Interface;</br>
+<br>• Configure o modelo, alertas, notificações e automações;</br>
+<br>• Após todas as etapas a integração e interface estará pronta.</br>
+
+
 ## 🗃 Histórico de lançamentos
 
-* 07/10/2024 CONCLUÍDO: Compra de materiais (Eriane)
-* 10/10/2024 ANDAMENTO: Chassi Tank (Henrique)
+* 0.1.1 - 07/10/2024
+  * Planejamento do projeto 
+  * Aquisição dos materiais (Eriane)
+* 0.1.2 - 10/10/2024 e 17/10/2024 
+  * Inicio da construção do código e do circuito 
 * 10/10/2024 ANDAMENTO: Integração ao Blynk (Luan)
-* 17/10/2024 CONCLUÍDO: Teste de sensores (Todos)
 * 03/11/2024 CONCLUÍDO: Divisão de afazeres 
 * 07/11/2024 ANDAMENTO: Organização do github e pastas (Todos)
 * 07/11/2024 ANDAMENTO: Desenvolvimento do código e circuito (Todos)
