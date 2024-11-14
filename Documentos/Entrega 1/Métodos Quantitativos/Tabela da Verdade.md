@@ -7,11 +7,13 @@ No projeto usando o ESP32-CAM, utilizamos sensores de movimento, temperatura e c
 Segue abaixo Tabela da Verdade para o ESP32-CAM, sistema básico de detecção de pragas:
 
 
-| Sensor/Entrada               | Condição do Sensor | Câmera (imagem)                |
-|------------------------|------------------|--------------------------------|
-| Objeto detectado       | Ativo            | Captura uma foto ou vídeo      |
-| Objeto não detectado   | Ativo            | Não faz nada                   |
-| Conexão Wi-Fi OK       | Ativo            | Envia a imagem/vídeo           |
-| Conexão Wi-Fi falhou   | Ativo            | Tenta reconectar               |
-| Sem energia            | Inativo          | Sistema desligado              |
+| Sensor/Entrada         | Condição do Sensor | Câmera (imagem)              | Saída (Ação)    | Descrição   |
+|------------------------|------------------|--------------------------------|-----------------|-------------|
+| Sensor de movimento    | Ativado (1)      | Praga detectada (1)            | Alarme acionado (1) | Movimento detectado e praga identificada, aciona alarme. |
+| Sensor de movimento    | Desativado (0)   | Nenhuma praga (0)              | Alarme desligado (0) | Nenhum movimento detectado, desliga o alarme. |
+| Sensor de temperatura  | Temperatura alta (1) | Praga detectada (1)        | Enviar notificação (1) | Temperatura elevada e praga detectada, envia alerta via Wi-Fi.
+| Sensor de temperatura  | Temperatura normal (0) | Nenhuma praga (0)        | Nenhuma ação (0) | Temperatura normal e nenhuma praga detectada, sem ação. |
+| Câmera (visão computacional) | Praga detectada (1) | Imagem gerada (1)     | Alarme (1) | Detecção de praga por visão computacional, armazena imagem para análise posterior. |
+| Câmera (visão computacional) | Nenhuma praga detectada (0) | Nenhuma imagem (0) | Nenhuma ação (0) | Nenhuma praga detectada pela câmera, nenhuma ação tomada. |
+| Sensor de umidade      | Umidade alta (1) | Praga detectada (1)            | Enviar alerta (1) | Alta umidade e praga detectada, envia alerta para o usuário. |
 
