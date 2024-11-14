@@ -33,4 +33,3 @@ Vamos imaginar como o sistema reage em algumas situações comuns:
 
 ---
 
-Esta tabela mostra de maneira simples o que acontece em cada caso. Assim, fica fácil entender quando a câmera vai tirar uma foto ou disparar um alerta.
