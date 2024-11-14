@@ -26,6 +26,10 @@ O nosso projeto tem como objetivo desenvolver e implementar uma solução inovad
 
 O aumento da demanda por alimentos e a necessidade de práticas agrícolas sustentáveis trazem à tona um desafio significativo, sendo ele o controle eficaz de pragas que afetam plantações e comprometem a produção. Métodos tradicionais de monitoramento e controle de pragas, como inspeções manuais e uso indiscriminado de pesticidas, têm se mostrado prejudiciais ao meio ambiente. Nesse contexto, o uso de tecnologias emergentes, como a Internet das Coisas (IoT), apresenta-se como uma solução promissora.
 <br><br>
+
+<p align="center">
+<img src="https://img.freepik.com/fotos-premium/um-robo-agricola-usa-reconhecimento-optico-para-controle-de-ervas-daninhas-e-pragas-conceito-robotica-agricola-reconhecimento-otico-controle-de-ervas-daninhas-controle-de-pragas-agricultura-de-precisao_918839-98808.jpg" alt="NOME DO JOGO" border="0"><br><br>
+ 
 O sistema desenvolvido integra um carrinho robótico que percorre autonomamente a área da plantação, utilizando uma combinação de sensores e câmeras para realizar a coleta contínua de dados. Este carrinho é equipado com sensores de movimento, que detectam a presença de pragas, e câmeras de alta resolução, que capturam imagens das plantas e do solo, permitindo a análise visual das pragas presentes. A presença desses sensores e câmeras no carrinho permite uma cobertura dinâmica e extensiva das áreas agrícolas, sem a necessidade de intervenção constante por parte dos agricultores.
 <br><br>
 Os dados coletados pelos sensores e câmeras são processados em tempo real e transmitidos para uma plataforma de análise na nuvem. A partir dessa análise, o sistema consegue identificar padrões, como a movimentação das pragas. Caso seja detectada uma infestação, o sistema envia alertas automáticos ao agricultor, por meio de notificações no celular ou por e-mail, permitindo que ações corretivas sejam tomadas de forma rápida e eficaz.
