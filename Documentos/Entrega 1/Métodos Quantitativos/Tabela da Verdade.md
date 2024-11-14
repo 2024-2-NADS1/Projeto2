@@ -6,7 +6,8 @@ No projeto usando o ESP32-CAM, utilizamos sensores de movimento, temperatura e c
 
 Segue abaixo Tabela da Verdade para o ESP32-CAM, sistema básico de detecção de pragas:
 
-| Situação               | Estado do Sensor | Ação do Sistema                |
+
+| Sensor/Entrada               | Condição do Sensor | Câmera (imagem)                |
 |------------------------|------------------|--------------------------------|
 | Objeto detectado       | Ativo            | Captura uma foto ou vídeo      |
 | Objeto não detectado   | Ativo            | Não faz nada                   |
