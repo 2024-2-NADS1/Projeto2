@@ -1,27 +1,13 @@
-### Configuração do ESP32-CAM para Medir Acurácia
-
-A ideia é usar o ESP32-CAM para fazer várias leituras, verificar se elas estão corretas, e então calcular a acurácia do sensor usando probabilidade.
-
-#### 1. Preparação do Ambiente
-
-1. **Instale a Biblioteca do ESP32 no Arduino IDE**:
-   - Abra o **Arduino IDE**.
-   - Vá em **Arquivo > Preferências** e no campo "URLs adicionais para Gerenciadores de Placas", adicione:
-     ```
-     https://dl.espressif.com/dl/package_esp32_index.json
-     ```
-   - Em **Ferramentas > Placas > Gerenciador de Placas**, procure por "ESP32" e instale a biblioteca.
-
-2. **Configuração da Placa**:
+**Configuração da Placa**:
    - No menu **Ferramentas**, configure:
      - Placa: **AI Thinker ESP32-CAM**.
      - Partição do Sketch: **Minimal SPIFFS**.
      - Porta correta, onde o ESP32-CAM está conectado.
 
-3. **Conexão do ESP32-CAM ao Computador**:
+**Conexão do ESP32-CAM ao Computador**:
    - Conecte o ESP32-CAM ao computador usando um adaptador FTDI configurado para 5V.
 
-#### 2. Código para Capturar Imagens e Calcular Acurácia
+#### . Código para Capturar Imagens e Calcular Acurácia
 
 Aqui está um exemplo de código para capturar imagens com o ESP32-CAM e calcular a acurácia das leituras. Esse código faz uma leitura, verifica se é correta e calcula a porcentagem de acertos.
 
