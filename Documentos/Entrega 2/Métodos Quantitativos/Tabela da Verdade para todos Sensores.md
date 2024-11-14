@@ -1,34 +1,148 @@
-Claro! Vamos criar uma Tabela da Verdade considerando os sensores **ESP32-CAM** e **HC-SR04** (sensor de ultrassom para medir distância). Vamos definir algumas entradas e saídas baseadas em um possível uso de ambos os sensores.
+### Configuração do ESP32-CAM para Medir Acurácia
 
-### Entradas Possíveis
-1. **Movimento Detectado** - Pode ser interpretado como uma condição para ativar a câmera (ESP32-CAM).
-2. **Distância Detectada (HC-SR04)** - O HC-SR04 fornece uma leitura de distância; uma condição mínima pode acionar a câmera, por exemplo.
-3. **Conexão Wi-Fi (ESP32-CAM)** - Indica se a ESP32-CAM está conectada à rede.
+A ideia é usar o ESP32-CAM para fazer várias leituras, verificar se elas estão corretas, e então calcular a acurácia do sensor usando probabilidade.
 
-### Saídas Possíveis
-1. **Imagem Capturada (ESP32-CAM)** - A ESP32-CAM tira uma foto ou grava vídeo ao detectar movimento ou uma certa distância.
-2. **Alerta de Objeto Próximo** - Um sinal enviado para indicar que a distância medida pelo HC-SR04 está abaixo de um valor limite.
-3. **Status da Conexão** - Indicação se a ESP32-CAM está conectada ou não.
+#### 1. Preparação do Ambiente
 
-### Exemplo de Tabela da Verdade para ESP32-CAM e HC-SR04
+1. **Instale a Biblioteca do ESP32 no Arduino IDE**:
+   - Abra o **Arduino IDE**.
+   - Vá em **Arquivo > Preferências** e no campo "URLs adicionais para Gerenciadores de Placas", adicione:
+     ```
+     https://dl.espressif.com/dl/package_esp32_index.json
+     ```
+   - Em **Ferramentas > Placas > Gerenciador de Placas**, procure por "ESP32" e instale a biblioteca.
 
-| Movimento Detectado | Distância (< Limiar) | Conexão Wi-Fi | Imagem Capturada | Alerta de Objeto Próximo | Status da Conexão |
-|---------------------|-----------------------|---------------|------------------|--------------------------|--------------------|
-| 1                   | 1                     | 1             | 1                | 1                        | 1                  |
-| 1                   | 1                     | 0             | 0                | 1                        | 0                  |
-| 1                   | 0                     | 1             | 1                | 0                        | 1                  |
-| 1                   | 0                     | 0             | 0                | 0                        | 0                  |
-| 0                   | 1                     | 1             | 1                | 1                        | 1                  |
-| 0                   | 1                     | 0             | 0                | 1                        | 0                  |
-| 0                   | 0                     | 1             | 0                | 0                        | 1                  |
-| 0                   | 0                     | 0             | 0                | 0                        | 0                  |
+2. **Configuração da Placa**:
+   - No menu **Ferramentas**, configure:
+     - Placa: **AI Thinker ESP32-CAM**.
+     - Partição do Sketch: **Minimal SPIFFS**.
+     - Porta correta, onde o ESP32-CAM está conectado.
 
-### Explicação
-- **Movimento Detectado**: 1 indica movimento, 0 indica ausência.
-- **Distância (< Limiar)**: 1 indica que a distância medida pelo HC-SR04 está abaixo do limiar (objeto próximo), 0 indica que está acima.
-- **Conexão Wi-Fi**: 1 indica que a ESP32-CAM está conectada à rede, 0 indica que não está.
-- **Imagem Capturada**: 1 indica que a ESP32-CAM captura uma imagem, 0 indica que não há captura.
-- **Alerta de Objeto Próximo**: 1 indica que um objeto foi detectado próximo (com base no HC-SR04), 0 indica que não.
-- **Status da Conexão**: 1 indica que a ESP32-CAM está conectada à rede, 0 indica que não está.
+3. **Conexão do ESP32-CAM ao Computador**:
+   - Conecte o ESP32-CAM ao computador usando um adaptador FTDI configurado para 5V.
 
-Essa tabela cobre diferentes cenários operacionais e como cada sensor responde em cada situação. Ela pode ser ajustada conforme os requisitos específicos do seu projeto.
+#### 2. Código para Capturar Imagens e Calcular Acurácia
+
+Aqui está um exemplo de código para capturar imagens com o ESP32-CAM e calcular a acurácia das leituras. Esse código faz uma leitura, verifica se é correta e calcula a porcentagem de acertos.
+
+```cpp
+#include "esp_camera.h"
+#include <WiFi.h>
+
+// Dados da rede Wi-Fi
+const char* ssid = "SEU_SSID";
+const char* password = "SUA_SENHA";
+
+// Configuração do modelo AI Thinker ESP32-CAM
+#define PWDN_GPIO_NUM     32
+#define RESET_GPIO_NUM    -1
+#define XCLK_GPIO_NUM      0
+#define SIOD_GPIO_NUM     26
+#define SIOC_GPIO_NUM     27
+#define Y9_GPIO_NUM       35
+#define Y8_GPIO_NUM       34
+#define Y7_GPIO_NUM       39
+#define Y6_GPIO_NUM       36
+#define Y5_GPIO_NUM       21
+#define Y4_GPIO_NUM       19
+#define Y3_GPIO_NUM       18
+#define Y2_GPIO_NUM       5
+#define VSYNC_GPIO_NUM    25
+#define HREF_GPIO_NUM     23
+#define PCLK_GPIO_NUM     22
+
+int totalLeituras = 0;
+int leiturasCorretas = 0;
+
+void setup() {
+  Serial.begin(115200);
+
+  // Configurações da câmera
+  camera_config_t config;
+  config.ledc_channel = LEDC_CHANNEL_0;
+  config.ledc_timer = LEDC_TIMER_0;
+  config.pin_d0 = Y2_GPIO_NUM;
+  config.pin_d1 = Y3_GPIO_NUM;
+  config.pin_d2 = Y4_GPIO_NUM;
+  config.pin_d3 = Y5_GPIO_NUM;
+  config.pin_d4 = Y6_GPIO_NUM;
+  config.pin_d5 = Y7_GPIO_NUM;
+  config.pin_d6 = Y8_GPIO_NUM;
+  config.pin_d7 = Y9_GPIO_NUM;
+  config.pin_xclk = XCLK_GPIO_NUM;
+  config.pin_pclk = PCLK_GPIO_NUM;
+  config.pin_vsync = VSYNC_GPIO_NUM;
+  config.pin_href = HREF_GPIO_NUM;
+  config.pin_sscb_sda = SIOD_GPIO_NUM;
+  config.pin_sscb_scl = SIOC_GPIO_NUM;
+  config.pin_pwdn = PWDN_GPIO_NUM;
+  config.pin_reset = RESET_GPIO_NUM;
+  config.xclk_freq_hz = 20000000;
+  config.pixel_format = PIXFORMAT_JPEG;
+
+  if(psramFound()){
+    config.frame_size = FRAMESIZE_UXGA;
+    config.jpeg_quality = 10;
+    config.fb_count = 2;
+  } else {
+    config.frame_size = FRAMESIZE_SVGA;
+    config.jpeg_quality = 12;
+    config.fb_count = 1;
+  }
+  
+  // Inicializa a câmera
+  if (esp_camera_init(&config) != ESP_OK) {
+    Serial.println("Erro ao iniciar a câmera");
+    return;
+  }
+
+  // Conecta ao Wi-Fi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("Conectado ao WiFi");
+}
+
+void loop() {
+  totalLeituras++;
+
+  // Captura a imagem
+  camera_fb_t *fb = esp_camera_fb_get();
+  if (!fb) {
+    Serial.println("Erro ao capturar imagem");
+    return;
+  }
+
+  // Verifica se a leitura é correta (substitua a lógica na função abaixo)
+  bool leituraCorreta = verificarLeitura(fb);
+
+  if (leituraCorreta) {
+    leiturasCorretas++;
+  }
+
+  // Calcula e exibe a acurácia
+  float acuracia = ((float)leiturasCorretas / totalLeituras) * 100;
+  Serial.printf("Acurácia: %.2f%%\n", acuracia);
+
+  // Libera a imagem da memória
+  esp_camera_fb_return(fb);
+
+  delay(5000); // Intervalo entre leituras
+}
+
+// Função para verificar a leitura correta (substitua com sua lógica)
+bool verificarLeitura(camera_fb_t *fb) {
+  // Retorne true se a leitura for correta, false se não for
+  return false;  // Exemplo padrão
+}
+```
+
+#### Explicando o Código
+
+- **Configuração da Câmera e Conexão Wi-Fi**: Faz a configuração da câmera e conecta o ESP32-CAM à rede.
+- **Captura e Verificação de Imagem**: Em cada ciclo do `loop()`, o ESP32-CAM captura uma imagem e verifica se ela é correta (você pode implementar essa lógica na função `verificarLeitura`).
+- **Cálculo da Acurácia**: A cada ciclo, a acurácia é calculada e exibida no serial, usando a relação entre leituras corretas e total de leituras.
+
+Esse código é uma base. A função `verificarLeitura` é onde você vai colocar o código para decidir se a leitura foi correta ou não.
