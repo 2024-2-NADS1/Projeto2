@@ -1,4 +1,4 @@
-# FECAP - Fundação de Comércio Álvares Penteado
+ # FECAP - Fundação de Comércio Álvares Penteado
 
 <p align="center">
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
@@ -120,17 +120,33 @@ Coloque código do prompt de comnando se for necessário
 ## Instalação Blynk
 
 <br>• Entre no site do Blykn e faça login:https://blynk.io/</br>
-<br>• Crie um novo projeto e obtenha as credenciais com o token de autenticação;</br>
+<br>• Crie um novo projeto, o aplicativo irá gerar um Token de Autenticação. Obtenha as credenciais com o token de autenticação, ele é importante;</br>
 <br>• No código do ESP32 inclua a biblioteca do Blynk e insira as credenciais;</br>
-<br>• Estabeleça a conexão com o servidor do Blynk;</br>
-<br>• Configure os pinos virtuais;</br>
-<br>• Com a conexão, integre o ESP32 ao Blynk;</br>
-<br>• Coloque o ESP32 online;</br>
-<br>• Execute atualizações de firmaware OTA;</br>
-<br>• Contrua a Interface;</br>
-<br>• Configure o modelo, alertas, notificações e automações;</br>
+<br>• Conecte-se ao servidor Blynk;</br>
+<br>• Defina os pinos virtuais;</br>
+<br>• Estabeleça a comunicação do ESP32 com o Blynk ;</br>
+<br>• Coloque o ESP32 em modo online;</br>
+<br>• Realize atualizações de firmware via OTA;</br>
+<br>• Desenvolva a interface de usuário;</br>
+<br>• Ajuste o modelo, configurações de alertas, notificações e automações;</br>
 <br>• Após todas as etapas a integração e interface estará pronta.</br>
 
+## Instalação do Arduino IDE
+
+<br>•Instale o Arduino IDE a partir no site: https://www.arduino.cc/en/software</br>
+<br>• Abra o Arduino IDE após ser instalado.</br>
+
+Configurar o Arduino IDE para ESP32-Cam:
+<br>• Baixe as bibliotecas Sketch -> Include Library -> Menage Libraries -> pesquise por Blynk e instale (certifique-se de instalar a versão mais recente).</br>
+<br>• Instale o drive CP210x Universal Windows Driver no site Silicon Labs</br>
+
+<br>• No Arduino IDE, vá em File > Preferences.</br>
+<br>• Adicione a URL a seguir ao campo "Additional Board Manager URLs"
+```sh
+https://dl.espressif.com/dl/package_esp32_index.json
+```
+<br>• Vá em Tools > Board > Boards Manager, na caixa de pesquisa digite "esp32" </br>
+Encontre o pacote esp32 da Espressif e clique em instalar.</br>
 
 ## 🗃 Histórico de lançamentos
 
