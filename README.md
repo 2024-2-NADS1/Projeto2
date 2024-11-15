@@ -78,44 +78,6 @@ Há também 4 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
-## 🛠 Impacto Esperado
-
-<b>AgroBot:</b>
-
-Este projeto tem o potencial de transformar práticas agrícolas tradicionais, reduzindo custos e aumentando a eficiência do cultivo de hortaliças. A introdução de robôs na agricultura pode melhorar a sustentabilidade e otimizar recursos 
-
-```sh
-A tecnologia ESP32 permite que o robô seja utilizado com conectividade Bluetooth e Wi-Fi, facilitando a coleta e armazenamento de dados em tempo real. As informações capturadas podem ser exibidas em uma plataforma online, proporcionando ao usuário uma visualização imediata e remota do progresso e das condições monitoradas pelo robô.
-```
-
-<b>Arduino:</b>
-
-Não é necessária nenhuma instalação! Basta executar o arquivo. 
-O vídeo será exibido apenas se houver um servidor web, podendo ser executado como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
-
-## 💻 Configuração para Desenvolvimento
-
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
-
-Para abrir este projeto você necessita das seguintes ferramentas:
-
--<a href="https://godotengine.org/download">GODOT</a>
-
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
-
 ## 💻 Configuração para Desenvolvimento
 ## Instalação Blynk
 
@@ -146,7 +108,7 @@ Configurar o Arduino IDE para ESP32-Cam:
 https://dl.espressif.com/dl/package_esp32_index.json
 ```
 <br>• Vá em Tools > Board > Boards Manager, na caixa de pesquisa digite "esp32" </br>
-Encontre o pacote esp32 da Espressif e clique em instalar.</br>
+<br>•Encontre o pacote esp32 da Espressif e clique em instalar.</br>
 
 ## 🗃 Histórico de lançamentos
 
