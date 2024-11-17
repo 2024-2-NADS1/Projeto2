@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Monitoramento de Hardware</title>
+</head>
+<body>
+    <h1>Monitoramento de Dados do Sensor</h1>
+    <p id="distancia">Distância: Carregando...</p>
+
+    <script>
+        async function atualizarDados() {
+            const response = await fetch('http://SEU_SERVIDOR.com/api/dados');
+            const data = await response.json();
+            document.getElementById('distancia').innerText = `Distância: ${data.distancia} cm`;
+        }
+
+        setInterval(atualizarDados, 5000); // Atualiza a cada 5 segundos
+    </script>
+</body>
+</html>
