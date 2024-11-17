@@ -12,7 +12,7 @@ Este projeto captura dados do sensor ultrassônico do ESP32-CAM e envia para uma
 2. Configure o código no `Arduino IDE`.
 
 ## Código
-O código de captura e envio de dados está em `codigo.ino`.
+O código de captura e envio de dados está em [codigo.ino](codigo.ino).
 
 ## Como usar
 1. Compile o código e envie para o ESP32-CAM.
