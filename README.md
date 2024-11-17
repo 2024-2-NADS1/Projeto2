@@ -51,8 +51,8 @@ Os dados coletados pelos sensores e câmeras são processados em tempo real e tr
 
 ##  Técnicas e Tecnologias utilizadas
 
-- ``Arduino IDE
--  ``Arduino IDE``
+- ``Arduino IDE``
+- ``c++``
 
 
 ## 🛠 Estrutura de pastas
