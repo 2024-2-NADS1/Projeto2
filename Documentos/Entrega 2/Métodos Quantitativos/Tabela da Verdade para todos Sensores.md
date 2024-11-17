@@ -131,4 +131,3 @@ bool verificarLeitura(camera_fb_t *fb) {
 - **Captura e Verificação de Imagem**: Em cada ciclo do `loop()`, o ESP32-CAM captura uma imagem e verifica se ela é correta (você pode implementar essa lógica na função `verificarLeitura`).
 - **Cálculo da Acurácia**: A cada ciclo, a acurácia é calculada e exibida no serial, usando a relação entre leituras corretas e total de leituras.
 
-Esse código é uma base. A função `verificarLeitura` é onde você vai colocar o código para decidir se a leitura foi correta ou não.
