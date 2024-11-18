@@ -1,5 +1,5 @@
 **Configuração da Placa**:
-   - No menu **Ferramentas**, configure:
+    No menu **Ferramentas**, configure:
      - Placa: **AI Thinker ESP32-CAM**.
      - Partição do Sketch: **Minimal SPIFFS**.
      - Porta correta, onde o ESP32-CAM está conectado.
