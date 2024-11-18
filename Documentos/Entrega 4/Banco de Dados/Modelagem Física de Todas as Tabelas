@@ -1,10 +1,9 @@
-# Modelo Físico de Todas as Tabelas
+# Modelo Físico de todas as tabelas
 Modelagem física de todas as tabelas com base no modelo conceitual sensores previamente definido.
 
 <br>
 
 ```sh
-
 CREATE TABLE Ambiente (
     ID_Ambiente INT PRIMARY KEY,
     Tipo VARCHAR(50) NOT NULL,
@@ -64,4 +63,4 @@ CREATE TABLE Chassi_Tank (
     Modelo VARCHAR(50) NOT NULL,
     Localizacao VARCHAR(100) NOT NULL
 );
-
+``
