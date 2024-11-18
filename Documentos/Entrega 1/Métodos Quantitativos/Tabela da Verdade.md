@@ -4,7 +4,7 @@ O ESP32-CAM oferece uma série de pinos GPIO que podem ser configurados como ent
 
 No projeto usando o ESP32-CAM, utilizamos sensores de movimento, temperatura e câmera para capturar imagens e identificar a presença de pragas. O sistema pode atuar com entrada digital (como sensores ou até a própria imagem da câmera processada) e gerar saídas que acionam alarmes, notificações ou registram dados.
 
-Segue abaixo Tabela da Verdade para o ESP32-CAM, sistema básico de detecção de pragas:
+Segue abaixo Tabela da Verdade para o ESP32-CAM, sistema básico de detecção de pragas.
 
 
 | Sensor/Entrada         | Condição do Sensor | Câmera (imagem)              | Saída (Ação)    | Descrição   |
