@@ -6,22 +6,17 @@ Modelagem física de duas tabelas com base no modelo conceitual previamente defi
 
 ```sh
 CREATE TABLE ESP32_CAM (
-    ID_Dispositivo INT PRIMARY KEY,
-    IP_Local VARCHAR(15) NOT NULL,
-    Status ENUM('Ativo', 'Inativo') DEFAULT 'Inativo',
-    Localizacao VARCHAR(100) NOT NULL,
-    ID_Ambiente INT NOT NULL,
-    FOREIGN KEY (ID_Ambiente) REFERENCES Ambiente(ID_Ambiente)
+     LOCALIZACAO VARCHAR,
+     STATUS_ATIVO_INATIVO_BOOLEAN,
+     ID_DISPOSITIVO INT,
+     IP_LOCAL VARCHAR
 );
 
-CREATE TABLE Praga_Detectada (
-    ID_Deteccao INT PRIMARY KEY,
-    ID_Praga INT NOT NULL,
-    ID_Imagem INT NOT NULL,
-    Data_Hora DATETIME NOT NULL,
-    Severidade ENUM('Baixa', 'Moderada', 'Alta') NOT NULL,
-    FOREIGN KEY (ID_Praga) REFERENCES Praga(ID_Praga),
-    FOREIGN KEY (ID_Imagem) REFERENCES Imagem_Capturada(ID_Imagem)
-
-);
+CREATE TABLE IMAGEM_CAPTURADA_PRAGA_DETECTADA (
+     URL_ARQUIVO VARCHAR,
+     DATA_HORA DATE,
+     ID_IMAGEM INT,
+     SEVERIDADE VARCHAR,
+     ID_PRAGA INT
+ );
 ``
