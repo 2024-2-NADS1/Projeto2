@@ -1,5 +1,5 @@
 ### Passos para o Desenvolvimento
-# 1. Configuração do Hardware (ESP32-CAM)
+# 1. Configuração do Hardware [(ESP32-CAM)](https://produto.mercadolivre.com.br/MLB-3344355055-modulo-esp32-cam-com-cmera-ov2640-_JM?matt_tool=40343894&matt_word=&matt_source=google&matt_campaign_id=14303413655&matt_ad_group_id=133855953276&matt_match_type=&matt_network=g&matt_device=c&matt_creative=584156655519&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=138390887&matt_product_id=MLB3344355055&matt_product_partition_id=2268053647590&matt_target_id=aud-1966981570049:pla-2268053647590&cq_src=google_ads&cq_cmp=14303413655&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=CjwKCAiAxea5BhBeEiwAh4t5K9ETElEGDTC9C6663yWJ94APFv0oazv0SrMMJexqGlXQ4lPf25r9rxoCcF4QAvD_BwE)
  
 ## O ESP32-CAM será responsável por capturar os dados do sensor e enviar as informações via rede para um servidor. No exemplo, utilizaremos: #
 
