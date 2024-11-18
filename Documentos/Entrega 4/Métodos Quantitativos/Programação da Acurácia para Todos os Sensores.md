@@ -2,8 +2,6 @@ A tabela e a explicação que forneci foram estruturadas para parecer o mais nat
 
 Aqui está uma versão um pouco mais simplificada e direta:
 
----
-
 ### Tabela da Verdade para ESP32-CAM e HC-SR04
 
 Vamos imaginar como o sistema reage em algumas situações comuns:
