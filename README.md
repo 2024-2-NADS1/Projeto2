@@ -28,7 +28,7 @@ O aumento da demanda por alimentos e a necessidade de práticas agrícolas suste
 <br><br>
 
 <p align="center">
-<img src="https://img.freepik.com/fotos-premium/um-robo-agricola-usa-reconhecimento-optico-para-controle-de-ervas-daninhas-e-pragas-conceito-robotica-agricola-reconhecimento-otico-controle-de-ervas-daninhas-controle-de-pragas-agricultura-de-precisao_918839-98808.jpg" alt="NOME DO JOGO" border="0"><br><br>
+<img src="https://github.com/user-attachments/assets/eb21bd36-7da7-47e6-8135-ccb5e3a933cf" alt="NOME DO JOGO" border="0"><br><br>
  
 O sistema desenvolvido integra um carrinho robótico que percorre autonomamente a área da plantação, utilizando uma combinação de sensores e câmeras para realizar a coleta contínua de dados. Este carrinho é equipado com sensores de movimento, que detectam a presença de pragas, e câmeras de alta resolução, que capturam imagens das plantas e do solo, permitindo a análise visual das pragas presentes. A presença desses sensores e câmeras no carrinho permite uma cobertura dinâmica e extensiva das áreas agrícolas, sem a necessidade de intervenção constante por parte dos agricultores.
 <br><br>
