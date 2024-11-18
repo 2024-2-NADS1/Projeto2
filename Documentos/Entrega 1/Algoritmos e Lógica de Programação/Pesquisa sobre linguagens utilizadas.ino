@@ -89,7 +89,6 @@ void classifyImage(uint8_t* inputBuffer, int inputWidth, int inputHeight) {
 
 4. Integração Completa
 
-Aqui está um esboço de como juntar tudo isso:
 
 void setup() {
     Serial.begin(115200);
@@ -111,7 +110,7 @@ void loop() {
     delay(5000);  // Tempo entre inferências
 }
 
-Explicação Rápida:
+Explicação:
 
 	•	setupCamera: Configura a câmera.
 	•	captureImage: Captura uma imagem da câmera.
