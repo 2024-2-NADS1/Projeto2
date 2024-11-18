@@ -15,6 +15,12 @@ CREATE TABLE Ambiente (
     Condicoes_Climaticas VARCHAR
 );
 
+CREATE TABLE Praga (
+    ID_Praga INT,
+    Nome VARCHAR,
+    Categoria VARCHAR
+);
+
 CREATE TABLE ESP32_CAM (
     ID_Dispositivo INT,
     IP_Local VARCHAR,
