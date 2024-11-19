@@ -4,7 +4,7 @@ Modelagem física de todas as tabelas com base no modelo conceitual sensores pre
 <br>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/ce445e25-53cb-4d5c-9826-ee8858f81265" >
+<img src="https://github.com/user-attachments/assets/62b9af83-1bc2-4263-b6ed-13b74ef0ad21" >
   <p align="center">
       
 ```sh
