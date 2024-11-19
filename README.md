@@ -103,4 +103,7 @@ Há também 4 pastas que seguem da seguinte forma:
 ## 🎓 Referência
 
 Aqui estão as referências usadas no projeto.
-
+- https://jornal.usp.br/atualidades/resistencia-a-inseticida-pode-ser-associada-a-aumento-de-doencas/
+- https://www.gov.br/inca/pt-br/assuntos/causas-e-prevencao-do-cancer/exposicao-no-trabalho-e-no-ambiente/agrotoxico
+- https://www.hashtagtreinamentos.com/analise-de-dados-no-mysql-sql
+- https://www.masonequipamentos.com.br/blog/internet-das-coisas/
